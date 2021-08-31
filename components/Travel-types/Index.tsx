@@ -1,52 +1,41 @@
-import { Box, Divider, Heading, HStack, Image, Wrap, WrapItem } from "@chakra-ui/react";
-
   
-export function TravelTypes() {
-  return(
+import { Flex, Grid, GridItem } from "@chakra-ui/layout";
+import { Box, Center, Divider } from "@chakra-ui/react";
+import Type from "./Type";
+
+export default function TravelTypes() {
+  return (
     <>
-    <HStack
-    w='1160px'
-    h='145px'
-    justify='space-between'
-    mx='auto'
-    mt='60px'
+    <Grid
+      templateColumns={["1fr 1fr","1fr 1fr","1fr 1fr","repeat(5, 1fr)"]}
+      w="100%"
+      justify="space-between"
+      align="center"
+      mt={["10","32"]}
+      mx="auto"
+      maxW="1160px"
+      flexWrap="wrap"
+      gap={[1,5]}
     >
-      <Image src='/images/Nightlife.svg' />
-      <Image src='/images/Beach.svg' />
-      <Image src='/images/Modern.svg' />
-      <Image src='/images/Classic.svg' />
-      <Image src='/images/More.svg' />
-    </HStack>
+      
+    <GridItem>
+      <Type icon="cocktail" text="vida noturna" />
+    </GridItem>
+    <GridItem>
+      <Type icon="surf" text="praia" />
+    </GridItem>
+    <GridItem>
+      <Type icon="building" text="moderno" />
+    </GridItem>
+    <GridItem>
+      <Type icon="museum" text="clássico" />
+      </GridItem>
+    <GridItem colSpan={[2, 2, 2, 1]}>
+      <Type icon="earth" text="e mais..." />
+      </GridItem>
+    </Grid>
 
-    <Box
-      mx='auto'
-      align='center'
-      justify='center'
-      mt='80px'
-    >
-    <Divider 
-    height='2px'
-    w='90px'
-    borderColor='#000'
-    />
-    </Box>
-
-    <Box
-      maxWidth='839px'
-      height='101px'
-      mx='auto'
-      mt='80px'
-    >
-      <Heading
-        color='dark.900'
-        fontSize='36px'
-        fontWeight='medium'
-        align='center'
-      >
-        Vamos nessa? <WrapItem> Então escolha seu continente </WrapItem>
-      </Heading>
-    </Box>
-
+    <Box w={["60px","90px"]} mx="auto" h="2px" bg="gray.700" my={["9","20"]} />
     </>
   )
 }

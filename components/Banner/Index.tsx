@@ -3,46 +3,49 @@ import { Box, Flex, Heading, HStack, Image, Text } from "@chakra-ui/react";
 export function Banner() {
   return (
     <Flex
-      w='100vw'
-      minHeight='368.21px'
+      w='100%'
+      h={["163px", "250px", "250px", "335px"]}
       bgImage='/images/Banner_background.jpg'
-      borderBottom='36px solid'
-      borderColor='light.900'
+      bgPosition={["100% 20%","100% 20%","100% 30%"]}
+      bgRepeat='no-repeat'
+      bgSize='cover'
     >
 
-      <HStack
-        minWidth='1240px'
+      <Flex
+        w="100%"
         mx='auto'
-        justify='space-between'
-        alignItems='center'
+        justify={['center', 'space-between']}
+        align='center'
+        px={["6","12","15","20","300px"]}
       >
-        <Box
-        maxWidth={524}
-        >
-          <Heading
-            maxWidth={440}
+        <div>
+        <Heading
             color='light.800'
-            fontSize='36px'
-            marginBottom='20px'
+            fontSize={["xl", "2xl", "2xl", "2xl", "4xl"]}
             fontWeight='medium'
           >
-            5 Continentes, infinitas possibilidades.
+            5 Continentes,<br /> infinitas possibilidades.
           </Heading>
           <Text
           color='light.400'
-          fontSize='18px'
-          fontWeight='normal'
+          mt="5" 
+          fontSize={["0.8rem","xl"]} 
+          maxW={["100%", "100%", "100%", "550px"]}
           >
             Chegou a hora de tirar do papel a viagem que você sempre sonhou.
           </Text>
-        </Box>
-        <Box
-        position='relative'
-        top='55px'
-        >
-        <Image src='/images/Airplane.svg' />
-        </Box>
-      </HStack>
+        </div>
+          
+
+        
+        <Image src='/images/Airplane.svg' 
+        w={["300px","300px","300px","430px"]} 
+        display={['none','none','block']}
+        transform="translateY(48px)"
+        ml="8"
+        />
+        
+      </Flex>
 
     </Flex>
   )
