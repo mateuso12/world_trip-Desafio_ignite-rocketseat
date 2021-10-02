@@ -5,7 +5,7 @@ export function Banner() {
     <Flex
       w='100%'
       h={["163px", "250px", "250px", "335px"]}
-      bgImage='/images/Banner_background.jpg'
+      bgImage='/images/Banner_background.jpg' 
       bgPosition={["100% 20%","100% 20%","100% 30%"]}
       bgRepeat='no-repeat'
       bgSize='cover'
@@ -43,6 +43,7 @@ export function Banner() {
         display={['none','none','block']}
         transform="translateY(48px)"
         ml="8"
+        alt='Airplane'
         />
         
       </Flex>

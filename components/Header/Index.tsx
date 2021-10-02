@@ -39,7 +39,7 @@ export function Header() {
           <Image
             w={["81px","184px"]}
             src='/images/Logo.svg'
-            alt="Um avição voando sobre o nome da marca world trip"
+            alt="Um avião voando sobre o nome da marca world trip"
             justifySelf="center"
             gridColumn="2"
           />
